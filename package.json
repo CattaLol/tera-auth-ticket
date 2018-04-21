@@ -7,8 +7,5 @@
   "main": "index.js",
   "dependencies": {
     "request": "^2.74.0"
-  },
-  "engines": {
-    "node": ">=6.0.0"
   }
 }
