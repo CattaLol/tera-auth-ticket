@@ -1,6 +1,6 @@
 {
   "name": "tera-auth-ticket",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simulate logging onto an EME TERA account to retrieve an auth ticket",
   "license": "ISC",
   "author": "meishu",
