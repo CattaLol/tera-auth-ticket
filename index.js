@@ -33,7 +33,7 @@ class webClient {
       this.request('/launcher/1', (err, res, body) => {
         const token = body.match(/meta content="(.+?)" name="csrf-token"/i);
         if (!token) {
-          console.log('failed to get CSRF token');
+          console.log('Failed to get CSRF token');
           return;
         }
 
@@ -49,7 +49,7 @@ class webClient {
           if (err) {
             console.log('Error: ');
             console.log(err);
-            return callback('failed to get info');
+            return callback('Failed to get account server info');
           }
 
           if (res.statusCode !== 200) {
@@ -97,7 +97,7 @@ class webClient {
       this.ready = 0;
     }
 
-    console.log('[web] (login) getting CSRF token');
+    console.log('Getting CSRF token');
 
     this.request('/launcher/1/signin', (err, res, body) => {
       if (err) {
@@ -108,7 +108,7 @@ class webClient {
 
       const token = body.match(/meta content="(.+?)" name="csrf-token"/i);
       if (!token) {
-        console.log('failed to get CSRF token');
+        console.log('Failed to get CSRF token');
         return;
       }
 
@@ -131,7 +131,7 @@ class webClient {
    * Submits login form and follows the redirect.
    */
   _authenticate(callback, params) {
-    console.log('[web] (login) authenticating account: ' + params['user[email]']);
+    console.log('Authenticating account: ' + params['user[email]']);
 
     this.request.post({
       url: '/launcher/1/authenticate',
@@ -147,7 +147,7 @@ class webClient {
       }
 
       if (res.statusCode !== 302) {
-        console.log('failed to auth');
+        console.log('Failed to authenticate');
         return;
       }
 
