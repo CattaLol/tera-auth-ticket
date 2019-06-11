@@ -37,7 +37,7 @@ class webClient {
           return;
         }
 
-        console.log('[web] (login) retrieving auth ticket')
+        console.log('Retrieving auth ticket and server info')
         this.request({
           url: '/launcher/1/account_server_info?attach_auth_ticket=1',
           headers: makeHeaders({
@@ -71,7 +71,7 @@ class webClient {
             return callback('Expected status code to be 200, was ' + data['result-code']);
           }
 
-          console.log(`[web] got ticket (${data.master_account_name}:${data.ticket})`);
+          console.log(`Ticket retrieved (${data.master_account_name}:${data.ticket})`);
 
           callback(null, {
             name: data.master_account_name,
