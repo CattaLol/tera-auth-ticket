@@ -25,8 +25,8 @@ async function doLogin()
        */
     }
     else{
-      // start up main routine of connecting to server. see FakeClient.js in toolbox/proxy repos. 
-      // If Caali or Pinkie deletes that file, then just browse to an older commit.
+      // start up main routine of connecting to server. see FakeClient.js in Tera-Proxy-Game-or-whatever-Caali-has-renamed-it-to in toolbox/proxy repos. 
+      // If Caali or Pinkie deletes that file, then just browse to an older commit or browser to one of the many, many, many forks floating around on Github.
     }
   });
   // Maybe you want to be fancy by integrating login re-attempt logic here? :^)
